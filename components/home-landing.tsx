@@ -33,14 +33,12 @@ export default function HomeLanding() {
           className="pointer-events-none w-1/3 transform translate-x-[20%] "></Image>
       </div>
       <div className={`absolute top-0 left-0 w-full h-full transform transition-all duration-[1.3s] ${scrolled ? "-translate-y-full" : ""}`}>
-        <Image
-          src="medias/img/svg/chambre-familliale-rect.svg"
+        <img
+          src="/medias/img/chambres hotels/suite/ch3.jpg"
           alt="Chambre familliale"
-          width={300}
-          height={300}
-          className={`pointer-events-none w-[30%] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[1.3s] ${
+          className={`pointer-events-none w-[30%] aspect-[3/4] object-cover absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-[1.3s] ${
             scrolled ? "opacity-0" : ""
-          }`}></Image>
+          }`}></img>
 
         <p
           className={`pointer-events-auto flex flex-col absolute bottom-[9%] left-[5%] w-[352px] text-lg text-content-ter transition-all duration-[1.3s] delay-150 transform ${

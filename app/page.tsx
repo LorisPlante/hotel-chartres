@@ -2,21 +2,19 @@
 import HeaderHome from "@/components/headerHome";
 import HomeLanding from "@/components/home-landing";
 import TapBar from "@/components/tap-bar";
-
 import { useEffect, useState } from "react";
-import Image from "next/image";
-
 import { A11y, Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const images = [
-    "/medias/img/svg/la-suite-carre.svg",
-    "/medias/img/svg/chambre-familliale-carre.svg",
-    "/medias/img/svg/chambre-prestige-carre.svg",
-    "/medias/img/svg/chambre-confort-carre.svg",
-    "/medias/img/svg/chambre-standard-carre.svg",
+    "/medias/img/chambres hotels/suite/ch3.jpg",
+    "/medias/img/chambres hotels/ch confort/ch3.jpg",
+    "/medias/img/chambres hotels/prestige/ch1.jpg",
+    "/medias/img/chambres hotels/ch confort/ch4.jpg",
+    "/medias/img/chambres hotels/ch standard/ch1.jpg",
   ];
   const names = ["La suite", "Chambre familliale", "Chambre prestige", "Chambre confort", "Chambre standard"];
   const hrefs = ["/la-suite", "/chambre-familliale", "/chambre-prestige", "/chambre-confort", "/chambre-standard"];
@@ -45,7 +43,7 @@ export default function Home() {
             <span>{`L'Hôtel de `}</span>
             <span>{`Chartres `}</span>
           </h2>
-          <Image src="/medias/img/svg/chambre-familliale-rect.svg" alt="Chambre de L'Hôtel de Chartres" width={600} height={800} className="ml-28"></Image>
+          <img src="/medias/img/chambres hotels/suite/ch3.jpg" alt="Chambre de L'Hôtel de Chartres" className="ml-28 h-[60vh] aspect-[3/4] object-cover"></img>
           <p className="text-p font-p">
             {`28 rue du grand faubourg`} <br />
             {`Tel : 33 (0)2 37 18 52 77`}
@@ -63,7 +61,7 @@ export default function Home() {
             {images.map((image, index) => (
               <div key={index}>
                 <a href={hrefs[index]} className="border-b border-b-content flex justify-start items-start flex-col gap-6 pb-6 mb-6">
-                  <Image src={image} alt={names[index]} width={400} height={400} className="w-full block" />
+                  <img src={image} alt={names[index]} className="w-full block aspect-square object-cover" />
                   {names[index]}
                 </a>
               </div>
@@ -82,14 +80,18 @@ export default function Home() {
             {images.map((image, index) => (
               <SwiperSlide key={index}>
                 <a href={hrefs[index]} className="border-b border-b-content flex justify-start items-start flex-col gap-6 pb-6">
-                  <Image src={image} alt={names[index]} width={400} height={400} className="w-full block" />
+                  <img src={image} alt={names[index]} className="w-full block aspect-square object-cover" />
                   {names[index]}
                 </a>
               </SwiperSlide>
             ))}
           </Swiper>
         </section>
+        <div className="absolute -bottom-10 sm:bottom-0 left-0 translate-y-full sm:translate-y-0">
+          <Footer></Footer>
+        </div>
       </main>
+
       <TapBar></TapBar>
     </>
   );

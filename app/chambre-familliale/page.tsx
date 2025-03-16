@@ -2,8 +2,6 @@
 import HeaderDefault from "@/components/headerDefault";
 import TapBar from "@/components/tap-bar";
 
-import Image from "next/image";
-
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,10 +10,17 @@ import "swiper/css/pagination";
 import IconMaxPeople from "@/components/icons/IconMaxPeople";
 import IconWifi from "@/components/icons/IconWifi";
 import IconBathroom from "@/components/icons/IconBathroom";
+import Footer from "@/components/footer";
 
 export default function ChambreFamilliale() {
-  const images = ["/medias/img/svg/chambre-familliale-rect.svg", "/medias/img/svg/chambre-familliale-rect.svg", "/medias/img/svg/chambre-familliale-rect.svg"];
-  const alts = ["", "", ""];
+  const images = [
+    "/medias/img/chambres hotels/ch confort/ch1.jpg",
+    "/medias/img/chambres hotels/ch confort/ch2.jpg",
+    "/medias/img/chambres hotels/ch confort/ch3.jpg",
+    "/medias/img/chambres hotels/ch confort/ch4.jpg",
+    "/medias/img/chambres hotels/ch confort/sdb.jpg",
+  ];
+  const alts = ["", "", "", "", ""];
   return (
     <>
       <HeaderDefault></HeaderDefault>
@@ -34,7 +39,7 @@ export default function ChambreFamilliale() {
           </h2>
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <Image src={image} alt={alts[index]} width={400} height={400} className="w-full block" />
+              <img src={image} alt={alts[index]} className="w-full block aspect-[3/4] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -58,6 +63,7 @@ export default function ChambreFamilliale() {
           </div>
         </section>
       </main>
+      <Footer></Footer>
       <TapBar></TapBar>
     </>
   );

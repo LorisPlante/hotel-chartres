@@ -14,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-FR" dir="ltr">
-      <body className="bg-background relative">
-        {children}
-        <Footer></Footer>
-      </body>
+      <body className="bg-background relative">{children}</body>
     </html>
   );
 }

@@ -69,7 +69,8 @@ body::-webkit-scrollbar {
   bottom: -16px !important;
 }
 .swiper-pagination-bullet {
-  width: 30% !important;
+  min-width: 15% !important;
+  max-width: 30% !important;
   height: 2px !important;
   border-radius: 9999px !important;
   background-color: #614457 !important;

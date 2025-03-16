@@ -1,7 +1,6 @@
 "use client";
 import HeaderDefault from "@/components/headerDefault";
 import TapBar from "@/components/tap-bar";
-import Image from "next/image";
 import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,10 +9,17 @@ import "swiper/css/pagination";
 import IconMaxPeople from "@/components/icons/IconMaxPeople";
 import IconWifi from "@/components/icons/IconWifi";
 import IconBathroom from "@/components/icons/IconBathroom";
+import Footer from "@/components/footer";
 
 export default function LaSuite() {
-  const images = ["/medias/img/svg/la-suite-rect.svg", "/medias/img/svg/la-suite-rect.svg", "/medias/img/svg/la-suite-rect.svg"];
-  const alts = ["", "", ""];
+  const images = [
+    "/medias/img/chambres hotels/suite/ch3.jpg",
+    "/medias/img/chambres hotels/suite/ch1.jpg",
+    "/medias/img/chambres hotels/suite/ch2.jpg",
+    "/medias/img/chambres hotels/suite/entrée.jpg",
+    "/medias/img/chambres hotels/suite/sdb.jpg",
+  ];
+  const alts = ["", "", "", "", ""];
   return (
     <>
       <HeaderDefault></HeaderDefault>
@@ -32,7 +38,7 @@ export default function LaSuite() {
           </h2>
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <Image src={image} alt={alts[index]} width={400} height={400} className="w-full block" />
+              <img src={image} alt={alts[index]} className="w-full block aspect-[3/4] object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -56,6 +62,7 @@ export default function LaSuite() {
           </div>
         </section>
       </main>
+      <Footer></Footer>
       <TapBar></TapBar>
     </>
   );

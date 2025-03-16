@@ -64,7 +64,7 @@ export default function Menu() {
             </a>
           </li>
           <li>
-            <a href="/" onClick={toggleMenu}>
+            <a href="/nos-salons" onClick={toggleMenu}>
               Nos salons
             </a>
           </li>
@@ -79,7 +79,7 @@ export default function Menu() {
             </a>
           </li>
           <li>
-            <a href="/" onClick={toggleMenu}>
+            <a href="/contact" onClick={toggleMenu}>
               Contact
             </a>
           </li>

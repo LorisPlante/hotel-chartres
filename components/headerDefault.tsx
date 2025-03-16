@@ -56,7 +56,7 @@ export default function HeaderDefault() {
             <a href="/">Accueil</a>
           </li>
           <li>
-            <a href="/">nos salons</a>
+            <a href="/nos-salons">nos salons</a>
           </li>
           <li>
             <a href="/">groupes</a>
@@ -65,7 +65,7 @@ export default function HeaderDefault() {
             <a href="/">tourisme</a>
           </li>
           <li>
-            <a href="/">contact</a>
+            <a href="/contact">contact</a>
           </li>
         </ul>
         <a href="/" className={`absolute left-1/2 top-4 transform -translate-x-1/2 transition-all duration-[1.5s]`}>
